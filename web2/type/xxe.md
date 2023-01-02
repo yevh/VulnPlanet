@@ -2,7 +2,7 @@
 
 The code below is vulnureable to XXE
 
-```
+```javascript
 const xml2js = require('xml2js');
 const parser = new xml2js.Parser();
 
@@ -23,7 +23,7 @@ This code uses the xml2js library to parse XML data provided by the user in an H
 # Impact?
 For example, if the user supplies the following XML data in the request:
 
-```
+```html
 <?xml version="1.0"?>
 <!DOCTYPE data [
   <!ENTITY file SYSTEM "file:///etc/passwd">
@@ -39,7 +39,7 @@ The xml2js parser will try to read the /etc/passwd file on the server and includ
 
 To prevent this type of attack, it's important to properly configure the xml2js parser to disable external entity processing. This can be done by setting the xml2js options to include the explicitCharkey: true and explicitArray: false flags:
 
-```
+```javascript
 const xml2js = require('xml2js');
 const parser = new xml2js.Parser({
   explicitCharkey: true,

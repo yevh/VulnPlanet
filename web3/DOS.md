@@ -2,7 +2,7 @@
 
 Smart contract below is vulnureable to Denial of Service (Gas limit reached)
 
-```
+```solidity
 contract FundTransfer {
   mapping (address => uint) public balances;
 
@@ -28,7 +28,7 @@ If the gas limit is reached, the transaction will fail and the funds will not be
 # How to fix?
 To prevent this vulnerability, the transfer() function should be updated to avoid performing expensive computations that could cause the gas limit to be reached. Here is an updated version of the contract that avoids expensive computations:
 
-```
+```solidity
 contract FundTransfer {
   mapping (address => uint) public balances;
 

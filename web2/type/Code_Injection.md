@@ -3,7 +3,7 @@
 The code below is vulnureable to Code Injection
 
 
-```
+```python
 # Vulnerable function
 def execute_code(code):
   return eval(code)
@@ -23,7 +23,7 @@ The execute_code function takes a string of Python code as input and evaluates i
 # Impact?
 An attacker could enter the following code as input: 
 
-```
+```python
 import os
 os.system('rm -rf /')
 ```

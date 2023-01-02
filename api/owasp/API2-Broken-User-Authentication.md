@@ -3,7 +3,7 @@
 The code below is vulnureable to Broken User Authentication
 
 
-```
+```javascript
 // This code is for an API endpoint that allows users to login
 
 // Read the user's input from the request

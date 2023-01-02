@@ -2,7 +2,7 @@
 
 The code below is vulnureable to Authentication Bypass
 
-```
+```java
 public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) {
       (...)
             httpRequest = (HttpServletRequest)request;

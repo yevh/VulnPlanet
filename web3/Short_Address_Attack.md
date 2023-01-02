@@ -2,7 +2,7 @@
 
 Smart contract below is vulnureable to Short Address Attack (Off-chain issues)
 
-```
+```solidity
 contract FundTransfer {
   mapping (address => uint) public balances;
 
@@ -23,7 +23,7 @@ If the _to address is shorter than 20 bytes, it will be treated as a zero-padded
 # How to fix?
 To prevent this vulnerability, the contract should be updated to check the length of the _to address before executing the transfer() function. Here is an updated version of the contract that checks the length of the _to address:
 
-```
+```solidity
 contract FundTransfer {
   mapping (address => uint) public balances;
 

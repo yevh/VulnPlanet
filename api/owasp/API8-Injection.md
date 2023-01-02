@@ -3,7 +3,7 @@
 The code below is vulnureable to Injection
 
 
-```
+```javascript
 // This code is for an API endpoint that allows users to search for products by name
 
 // Read the user's input from the request

@@ -11,7 +11,7 @@ Coverage:
 
 Insecure cryptographic algorithm to encrypt sensitive data
 
-```
+```swift
 import Foundation
 import CommonCrypto
 
@@ -58,7 +58,7 @@ An attacker could exploit this vulnerability by using a known plaintext attack t
 # How to fix?
 To prevent this vulnerability, the app should use a modern and secure cryptographic algorithm to encrypt the sensitive data. Here is an updated version of the app that uses the AES algorithm to encrypt the data:
 
-```
+```swift
 import Foundation
 import CommonCrypto
 
@@ -102,7 +102,7 @@ In this updated version of the app, the encrypt() method uses the AES algorithm 
 
 Insecure cryptographic algorithm to encrypt sensitive data
 
-```
+```kotlin
 import android.util.Base64
 import javax.crypto.Cipher
 import javax.crypto.spec.SecretKeySpec
@@ -127,7 +127,7 @@ An attacker could exploit this vulnerability by using a known plaintext attack t
 # How to fix?
 To prevent this vulnerability, the app should use a modern and secure cryptographic algorithm to encrypt the sensitive data. Here is an updated version of the app that uses the AES algorithm to encrypt the data:
 
-```
+```kotlin
 import android.util.Base64
 import javax.crypto.Cipher
 import javax.crypto.spec.SecretKeySpec

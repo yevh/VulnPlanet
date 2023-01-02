@@ -3,7 +3,7 @@
 The code below is vulnureable to Integer Overflow
 
 
-```
+```c
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>

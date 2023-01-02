@@ -15,7 +15,7 @@ Access control enforces policy such that users cannot act outside of their inten
 
 For example, the following admin endpoint exists and can be accessed by anyone
 
-```
+```javascript
 app.use('/admin', function (req, resp) {
     resp.end('Admin functionality...');
 });
@@ -25,7 +25,7 @@ app.use('/admin', function (req, resp) {
 
 Let's add checks if session is established and that the current user is an administrator
 
-```
+```javascript
 function checkAdmin(req, resp, next) {
     const username = req.session.user_id;
     if (!username) {
@@ -46,7 +46,7 @@ function checkAdmin(req, resp, next) {
 
 Let's plugged that into every endpoint or router
 
-```
+```javascript
 app.use('/admin', checkAdmin, function (req, resp) {
     resp.end('Admin functionality...');
 });
@@ -58,7 +58,7 @@ app.use('/admin', checkAdmin, function (req, resp) {
 
 Spring controller does not explicitly enforce any authentication
 
-```
+```java
 @RestController
 @RequestMapping(path = "/admin")
 public class AdminApi {
@@ -73,7 +73,7 @@ public class AdminApi {
 
 Implement an exhaustive authentication mechanism in which some endpoints are allowed, and all others are explicitly forbidden so as to make the application more resilient to changes:
 
-```
+```java
 http
     .antMatchers(HttpMethod.GET, "/", "/index.html", "/css/**", "/js/**").permitAll()
     .anyRequest().authenticated();
@@ -85,7 +85,7 @@ http
 
 Administrative functionality that allows a user list to be shown when a specific URL is called. The /admin/users URI is available to everyone who provides a cookie with the name set to a username. A malicious actor could manipulate the HTTP request and add the Cookie header without performing a successful authentication. Since the authentication routine only checks for the presence of the username cookie, access is granted.
 
-```
+```go
 func Users(w http.ResponseWriter, r * http.Request) {
   cookieUser, _: = r.Cookie("username")
   if cookieUser == nil {
@@ -100,7 +100,7 @@ func Users(w http.ResponseWriter, r * http.Request) {
 
 Implement session management using Gorilla’s Sessions package. Upon successful authentication, the application returns the session cookie go-session, a random base64 encoded string. The string does not contain user information. The user’s session information is stored server-side in a Map object, where the value of the go-session cookie is the key.
 
-```
+```go
 package main
 import (
   "fmt"
@@ -157,7 +157,7 @@ func main() {
 
 Flask web application, which has an administrative functionality to delete the database when a specific URL is called.
 
-```
+```python
 @app.route('/admin/init', methods=['POST'])
 def reinitialize():
     cursor.execute("DROP DATABASE analytics")
@@ -168,7 +168,7 @@ def reinitialize():
 
 Flask-Session is an extension for Flask that adds support for server-side sessions to a web application.
 
-```
+```python
 from flask import Flask, session, abort
 from flask.ext.session import Session
 
@@ -189,7 +189,7 @@ def admin_init():
 
 Symfony controller below provides an administrative endpoint that is used to fetch sensitive information about users. The class lacks the security annotation that restricts its access to authenticated users
 
-```
+```php
 /**
  * @Route("/admin/users")
  */
@@ -217,7 +217,7 @@ class UsersController extends Controller
 
 In Symfony, access to specific controllers can be restricted by annotations. 
 
-```
+```php
 /**
  * @Route("/admin/users")
  * @Security("has_role('ROLE_ADMIN')")

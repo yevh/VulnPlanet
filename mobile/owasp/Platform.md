@@ -11,7 +11,7 @@ Coverage:
 
 Uses app local storage instead of the keychain to store sensitive data
 
-```
+```swift
 import UIKit
 
 class ViewController: UIViewController {
@@ -33,7 +33,7 @@ App local storage is not secure and can be accessed by other apps on the device 
 # How to fix?
 To prevent this vulnerability, the app should use the keychain to store sensitive data, such as passwords. The keychain is a secure storage location provided by the iOS platform, which is encrypted and protected by the device's hardware security features. Here is an updated version of the app that uses the keychain to store the user's password:
 
-```
+```swift
 import UIKit
 import KeychainAccess
 
@@ -54,7 +54,7 @@ In this updated version of the app, the saveButtonTapped() method uses the Keych
 
 Stores sensitive information in shared preferences
 
-```
+```kotlin
 import android.content.SharedPreferences
 
 class MainActivity : AppCompatActivity() {
@@ -79,7 +79,7 @@ Shared preferences are not secure and can be accessed by other apps on the devic
 # How to fix?
 To prevent this vulnerability, the app should use a secure storage location provided by the Android platform, such as the keystore, to store sensitive information. The keystore is encrypted and protected by the device's hardware security features, making it more secure than shared preferences. Here is an updated version of the app that uses the keystore to store the user's password:
 
-```
+```kotlin
 import android.security.keystore.KeyGenParameterSpec
 import android.security.keystore.KeyProperties
 import java.security.KeyStore

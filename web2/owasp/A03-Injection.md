@@ -19,7 +19,7 @@ An application is vulnerable to attack when:
 
 Node.js provides several ways to execute external programs as part of the child_process package. The exec method spawns a shell then executes the command within that shell. the execSync (synchronous version of exec) to run a system command with unsanitized user input.
 
-```
+```javascript
 const output = child_process.execSync(`ping -c 1 '${destination}'`);
 ```
 
@@ -27,7 +27,7 @@ const output = child_process.execSync(`ping -c 1 '${destination}'`);
 
 . If this is not possible, execution of external commands should be handled by using other methods (execFile and spawn) to directly invoke the desired command, instead of by invoking a system shell.
 
-```
+```javascript
 const output = child_process.spawnSync('ping', ['-c', '1', destination]);
 ```
 
@@ -38,7 +38,7 @@ const output = child_process.spawnSync('ping', ['-c', '1', destination]);
 
 Java method invokes Runtime.exec(), which receives unsanitized data originating from the environment, making this code susceptible to a command injection attack.
 
-```
+```java
 public static void listFiles(String dir) throws Exception {
   Runtime rt = Runtime.getRuntime();
   Process proc = rt.exec(new String[] {"sh", "-c", "ls " + dir});
@@ -59,7 +59,7 @@ public static void listFiles(String dir) throws Exception {
 
 Sanitize the untrusted user input by permitting only a small group of allowed characters in the argument that will be passed to Runtime.exec(); all other characters are excluded.
 
-```
+```java
 // ...
 if (!Pattern.matches("[0-9A-Za-z@.]+", dir)) {
   // Handle error
@@ -74,7 +74,7 @@ if (!Pattern.matches("[0-9A-Za-z@.]+", dir)) {
 
 Flask web application executes the nslookup command to resolve the host supplied by the user.
 
-```
+```python
 @app.route("/dns")
 def page():
 
@@ -88,7 +88,7 @@ def page():
 
 Execute commands using the subprocess API, passing the command as a list of argument strings with the shell option set to False. Passing the command as a list of arguments is the safer approach that should always be used, but it might be vulnerable to argument injection depending on the binary.
 
-```
+```python
 subprocess.Popen([ 'nslookup', hostname ], ... , shell=False)
 ```
 
@@ -99,7 +99,7 @@ subprocess.Popen([ 'nslookup', hostname ], ... , shell=False)
 ```escapeshellcmd``` doesn’t prevent additional arguments from being injected. The attacker can cat any files, not only the ones suffixed with "_public.txt",
    by passing additional arguments such as "data_private.csv /tmp/data"
 
-```
+```php
 exec(escapeshellcmd("/usr/bin/cat /tmp/".$_GET["arg"]."_public.txt"));
 ```
 
@@ -107,6 +107,6 @@ exec(escapeshellcmd("/usr/bin/cat /tmp/".$_GET["arg"]."_public.txt"));
 
 ```escapeshellarg``` should be used to sanitize a specific argument:
 
-```
+```php
 exec("/usr/bin/cat ".escapeshellarg("/tmp/".$_GET["arg"]."_public.txt"));
 ```

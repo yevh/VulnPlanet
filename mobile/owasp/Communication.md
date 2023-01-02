@@ -11,7 +11,7 @@ Coverage:
 
 Failing to inspect the server's certificate during a TLS handshake
 
-```
+```swift
 import Foundation
 import Network
 
@@ -40,7 +40,7 @@ By default, the NWConnection class will unconditionally accept any certificate o
 # How to fix?
 To prevent this vulnerability, the app should inspect the server's certificate during the TLS handshake and verify that it is valid and trusted. This ensures that the app only establishes a connection with the authentic server and not with an attacker who is using a forged certificate. Here is an updated version of the app that verifies the server's certificate during the TLS handshake:
 
-```
+```swift
 import Foundation
 import Network
 
@@ -73,7 +73,7 @@ In this updated version of the app, the connect() method sets the tlsOptions pro
 
 Failing to inspect the server's certificate during a TLS handshake
 
-```
+```kotlin
 import android.app.Activity
 import javax.net.ssl.HttpsURLConnection
 
@@ -94,7 +94,7 @@ By default, the HttpsURLConnection class will unconditionally accept any certifi
 # How to fix?
 To prevent this vulnerability, the app should inspect the server's certificate during the TLS handshake and verify that it is valid and trusted. This ensures that the app only establishes a connection with the authentic server and not with an attacker who is using a forged certificate. Here is an updated version of the app that verifies the server's certificate during the TLS handshake:
 
-```
+```kotlin
 import android.app.Activity
 import javax.net.ssl.HttpsURLConnection
 import javax.net.ssl.SSLContext

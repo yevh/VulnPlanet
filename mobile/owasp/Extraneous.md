@@ -11,7 +11,7 @@ Coverage:
 
 Hidden interface
 
-```
+```swift
 // Import the necessary modules
 import Foundation
 import UIKit
@@ -52,7 +52,7 @@ This allows an attacker to discover the administrative REST endpoint URL through
 
 In this code, the showAdminDashboard() method is marked as deprecated using the @available attribute. This will prevent the method from being called and will generate a warning if it is used. This makes it less likely for an attacker to discover and exploit the hidden interface. Additionally, the method could be removed altogether to completely eliminate the vulnerability.
 
-```
+```swift
 // Import the necessary modules
 import Foundation
 import UIKit
@@ -88,7 +88,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 Hidden interface
 
-```
+```kotlin
 // Import the necessary modules
 import android.app.Activity
 import android.os.Bundle
@@ -121,7 +121,7 @@ This allows an attacker to discover the administrative REST endpoint URL through
 
 In this code, the showAdminDashboard() method is marked as deprecated using the @Deprecated annotation. This will prevent the method from being called and will generate a warning if it is used. This makes it less likely for an attacker to discover and exploit the hidden interface. Additionally, the method could be removed altogether to completely eliminate the vulnerability.
 
-```
+```kotlin
 // Import the necessary modules
 import android.app.Activity
 import android.os.Bundle

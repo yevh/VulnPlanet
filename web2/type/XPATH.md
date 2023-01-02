@@ -2,7 +2,7 @@
 
 The code below is vulnureable to XPath Injection
 
-```
+```javascript
 const xpath = require('xpath');
 const dom = require('xmldom').DOMParser;
 
@@ -22,7 +22,7 @@ This code uses the xpath and xmldom libraries to parse an XML document provided 
 # Impact?
 For example, if the user supplies the following XPath expression in the request:
 
-```
+```javascript
 xpathExpression: '//*[name()="secret" or name()="password"]'
 ```
 
@@ -32,7 +32,7 @@ The xpath.select() method will select all nodes with a name of secret or passwor
 
 To prevent this type of attack, it's important to properly validate and sanitize user-provided input before using it in an XPath expression. In this case, you could use a regular expression to ensure that the XPath expression only contains allowed characters, such as letters, numbers, and common XPath operators:
 
-```
+```javascript
 const xpath = require('xpath');
 const dom = require('xmldom').DOMParser;
 

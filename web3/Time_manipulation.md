@@ -2,7 +2,7 @@
 
 Smart contract below is vulnureable to Time manipulation (Timestamp dependence)
 
-```
+```solidity
 contract FundTransfer {
   uint public deadline;
 
@@ -24,7 +24,7 @@ To exploit this vulnerability, an attacker could send a transaction to the contr
 # How to fix?
 To prevent this vulnerability, the contract should uses a secure source of randomness to prevent the time manipulation (timestamp dependence) vulnerability:
 
-```
+```solidity
 import "https://github.com/dapphub/ds-random/ds-random.sol";
 
 contract FundTransfer {

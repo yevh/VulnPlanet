@@ -2,7 +2,7 @@
 
 The code below is vulnureable to Security Misconfiguration
 
-```
+```javascript
 // This code is for an API server
 
 const express = require("express");
@@ -37,7 +37,7 @@ This is an example of security misconfiguration, because the server is not prope
 # How to fix?
 To avoid this type of vulnerability, it is important to properly configure the server and its components to ensure that sensitive information is protected from unauthorized access. In this case, the code could be updated to only allow specific clients to access the static files  in the public directory, rather than allowing any client to access them. Here is an example of how you can prevent security misconfiguration by restricting CORS:
 
-```
+```javascript
 // This code is for an API server
 
 const express = require("express");

@@ -2,7 +2,7 @@
 
 Smart contract below is vulnureable to Front Running (Race condition)
 
-```
+```solidity
 contract Exchange {
   mapping (address => uint) public balances;
 
@@ -29,7 +29,7 @@ To exploit this vulnerability, an attacker could first call the buyToken() funct
 # How to fix?
 To prevent this vulnerability, the contract should be updated to check the caller's balance before executing a transaction. Here is an updated version of the contract that checks the caller's balance before executing the buyToken() and sellToken() functions:
 
-```
+```solidity
 contract Exchange {
   mapping (address => uint) public balances;
 

@@ -2,7 +2,7 @@
 
 Smart contract below is vulnureable to Silent failing sends (Unchecked Return Values For Low Level Calls)
 
-```
+```solidity
 contract FundTransfer {
   mapping (address => uint) public balances;
 
@@ -23,7 +23,7 @@ This function will fail silently if the recipient's contract does not have a pay
 # How to fix?
 To prevent this vulnerability, the transfer() function should be updated to use the send() function instead of the transfer() function. The send() function will return a boolean value indicating whether the transfer was successful, which allows the contract to handle failed transfers properly. Here is an updated version of the contract that uses the send() function:
 
-```
+```solidity
 contract FundTransfer {
   mapping (address => uint) public balances;
 

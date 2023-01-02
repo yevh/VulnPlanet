@@ -2,7 +2,7 @@
 
 The code below is vulnureable to LDAP Injection
 
-```
+```javascript
 const ldap = require('ldapjs');
 const client = ldap.createClient({
   url: 'ldap://ldap.example.com'
@@ -25,14 +25,14 @@ This code uses the ldapjs library to bind to an LDAP server using a username and
 # Impact?
 For example, if the user supplies the following username and password in the request:
 
-```
+```javascript
 username: '*)(uid=*))(|(uid=*)))(|(uid=*'
 password: 'password'
 ```
 
 The ldapjs client will construct the following LDAP filter when binding to the server:
 
-```
+```javascript
 (uid=*)(uid=*)(|(uid=*)))(|(uid=*)
 ```
 
@@ -43,7 +43,7 @@ This filter will match any user in the LDAP directory, allowing the attacker to 
 
 To prevent this type of attack, it's important to properly validate and sanitize user-provided input before using it in an LDAP query. In this case, you could use a regular expression to ensure that the username only contains allowed characters, such as letters, numbers, and underscores:
 
-```
+```javascript
 const ldap = require('ldapjs');
 const client = ldap.createClient({
   url: 'ldap://ldap.example.com'

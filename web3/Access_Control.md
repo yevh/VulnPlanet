@@ -2,7 +2,7 @@
 
 Smart contract below is vulnureable to Broken Access Control
 
-```
+```solidity
 contract WalletLibrary {
   address public owner;
   mapping (address => uint) public balances;
@@ -48,7 +48,7 @@ An attacker could exploit this vulnerability by calling the initWallet() functio
 # How to fix?
 To prevent this vulnerability, the initWallet() function should be updated to properly check the caller's permissions before allowing them to create a new Wallet contract. For example, the function could be updated to only allow the contract's owner to create new Wallet contracts, as shown in the following example:
 
-```
+```solidity
 function initWallet(address _owner) public {
   require(msg.sender == owner);
   Wallet wallet = new Wallet(_owner);

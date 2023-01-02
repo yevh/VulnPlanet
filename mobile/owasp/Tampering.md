@@ -11,7 +11,7 @@ Coverage:
 
 Lack of jailbreak detection
 
-```
+```swift
 import UIKit
 
 class BankingAppViewController: UIViewController {
@@ -49,7 +49,7 @@ Jailbreaking gives hackers full control to perform system-wide operations on a d
 
 To prevent this vulnerability, we can add jailbreak detection to the app. Here is an updated version of the app that includes this change:
 
-```
+```swift
 import UIKit
 
 class BankingAppViewController: UIViewController {
@@ -109,7 +109,7 @@ class BankingAppViewController: UIViewController {
 
 Lack of root detection
 
-```
+```kotlin
 public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -143,7 +143,7 @@ Rooting gives hackers full control to perform system-wide operations on a device
 # How to fix?
 Implement proper root detection
 
-```
+```kotlin
 public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

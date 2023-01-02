@@ -2,7 +2,7 @@
 
 The code below is vulnureable to Lack of Resources & Rate Limiting
 
-```
+```javascript
 // This code is for an API endpoint that allows users to access a large amount of data
 
 // Check if the user is authenticated

@@ -2,7 +2,7 @@
 
 The code below is vulnureable to Improper Assets Management
 
-```
+```javascript
 // This code is for the social network's official API
 
 const express = require("express");

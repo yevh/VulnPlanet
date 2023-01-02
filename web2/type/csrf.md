@@ -2,7 +2,7 @@
 
 The code below is vulnureable to Cross Site Request Forgery (CSRF)
 
-```
+```javascript
 const express = require('express');
 const app = express();
 
@@ -52,7 +52,7 @@ This code sets up an Express app with routes for the homepage, login page, and l
 # Impact?
 For example, if the attacker creates a page with the following HTML and JavaScript:
 
-```
+```html
 <form method="POST" action="http://localhost:3000/login">
   <input type="hidden" name="username" value="attacker">
   <input type="hidden" name="password" value="password123">
@@ -70,7 +70,7 @@ And then tricks a logged-in user into visiting the page, the form will be automa
 
 The code below sets up an Express app with routes for the homepage and login action. The homepage route generates a unique token for the user's session and stores it in the user's session. The token is then passed to the homepage template as a local variable.
 
-```
+```javascript
 const express = require('express');
 const app = express();
 

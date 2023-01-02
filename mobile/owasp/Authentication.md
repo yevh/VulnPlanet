@@ -11,7 +11,7 @@ Coverage:
 
 Failing to verify that service requests are associated with a known user
 
-```
+```swift
 import Foundation
 import Network
 
@@ -43,7 +43,7 @@ An attacker could exploit this vulnerability by sending service requests to the 
 # How to fix?
 To prevent this vulnerability, the app should verify that service requests are associated with a known user before processing them. This ensures that only authenticated users are able to execute functionality on the app's backend server. Here is an updated version of the app that verifies that service requests are associated with a known user:
 
-```
+```swift
 import Foundation
 import Network
 
@@ -80,7 +80,7 @@ In this updated version of the app, the sendRequest() method verifies that the u
 
 Failing to verify that service requests are associated with a known user
 
-```
+```kotlin
 import android.app.Activity
 import java.net.HttpURLConnection
 
@@ -104,7 +104,7 @@ An attacker could exploit this vulnerability by sending service requests to the 
 # How to fix?
 To prevent this vulnerability, the app should verify that service requests are associated with a known user before processing them. This ensures that only authenticated users are able to execute functionality on the app's backend server. Here is an updated version of the app that verifies that service requests are associated with a known user:
 
-```
+```kotlin
 import android.app.Activity
 import java.net.HttpURLConnection
 

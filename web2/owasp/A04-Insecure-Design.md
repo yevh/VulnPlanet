@@ -13,7 +13,7 @@ Insecure design is a broad category representing different weaknesses, expressed
 
 Node.js (JavaScript) does not provide advanced forms of object serialization, yet the JSON (JavaScript Object Notation) format is often used to convert JavaScript data object from/to a string representation. Before the relative recent addition of the JSON.parse method to ECMAScript, developers used to deserialize objects using the eval function. 
 
-```
+```javascript
 function myJSONParse(data) {
     return eval(`(${data})`);
 }
@@ -23,7 +23,7 @@ function myJSONParse(data) {
 
 Serialize and deserialize JavaScript objects is to use the provided JSON global object.
 
-```
+```javascript
 const object = {foo: 123};
 JSON.stringify(object) // '{"foo":123}'
 JSON.parse('{"foo":123}') // { foo: 123 }
@@ -35,7 +35,7 @@ JSON.parse('{"foo":123}') // { foo: 123 }
 
 Spring controller uses the data coming from the client request to deserialize an object.
 
-```
+```java
 @Controller
 public class MyController {
     @RequestMapping(value = "/", method = GET)
@@ -58,7 +58,7 @@ public class MyController {
 
 Since Java version 9, it has been possible to specify a deserialization filter in several ways. One example is to use the setObjectInputFilter method for ObjectInputStream objects before their use. The setObjectInputFilter method takes, as an argument, a method that implements the filtering logic. The following filter only allows one to deserialize instances of the MyClass class
 
-```
+```java
 public class MyFilter {
     static ObjectInputFilter.Status myFilter(ObjectInputFilter.FilterInfo info) {
         Class<?> serialClass = info.serialClass();
@@ -81,7 +81,7 @@ stream.setObjectInputFilter(MyFilter::myFilter);
 
 Flask endpoint provides an example where untrusted data is fed into the pickle.loads function
 
-```
+```python
 from flask import request
 import pickle
 import yaml
@@ -99,7 +99,7 @@ def yaml_load():
 
 ## Prevention code example
 
-```
+```python
 from flask import request
 import yaml
 

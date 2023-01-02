@@ -2,7 +2,7 @@
 
 Smart contract below is vulnureable to Arithmetic Issues (Integer overflow)
 
-```
+```solidity
 contract FundTransfer {
   mapping (address => uint) public balances;
 
@@ -23,7 +23,7 @@ If a user's balance exceeds this maximum value, and they try to transfer more fu
 # How to fix?
 To prevent this vulnerability, the balances mapping should be updated to use a data type that can support larger values, such as uint256. Here is an updated version of the contract that uses a uint256 data type:
 
-```
+```solidity
 contract FundTransfer {
   mapping (address => uint256) public balances;
 

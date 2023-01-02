@@ -2,7 +2,7 @@
 
 The code below is vulnureable to Mass Assignment
 
-```
+```javascript
 // This code is for an API endpoint that allows users to create new accounts
 
 // Read the user's input from the request

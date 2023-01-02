@@ -2,7 +2,7 @@
 
 The code below is vulnureable to Insecure Deserialization
 
-```
+```java
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -57,13 +57,13 @@ This code defines a MaliciousObject class that implements the Serializable inter
 # Impact?
 The attacker could create an instance of the MaliciousObject class and serialize it to a byte array:
 
-```
+```java
 MaliciousObject payload = new MaliciousObject();
 byte[] bytes = toByteArray(payload);
 ```
 The attacker could then send the serialized object to the victim, who would deserialize it and execute the malicious code:
 
-```
+```java
 Object object = fromByteArray(bytes);
 ```
 
@@ -72,7 +72,7 @@ When the victim deserializes the object, the code in the readObject() method wil
 # How to fix?
 To prevent this type of attack, it's important to properly validate and sanitize user-provided input before deserializing it. This could involve using a whitelist of classes that are allowed to be deserialized. For example:
 
-```
+```java
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;

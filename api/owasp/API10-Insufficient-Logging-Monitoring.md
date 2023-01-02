@@ -2,7 +2,7 @@
 
 The code below is vulnureable to Insufficient Logging & Monitoring
 
-```
+```javascript
 // This code is for the social network's official API
 
 const express = require("express");

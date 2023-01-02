@@ -2,7 +2,7 @@
 
 Smart contract below is vulnureable to Reentrancy (Race to empty)
 
-```
+```solidity
 contract FundTransfer {
   address public owner;
   mapping (address => uint) public balances;
@@ -39,7 +39,7 @@ An attacker could exploit this vulnerability as follows:
 # How to fix?
 To prevent this vulnerability, the withdraw() function should be updated to check if the caller is a contract, and if so, it should prevent the contract from calling the withdraw() function again. This can be done using the require() function, as shown in the following example:
 
-```
+```solidity
 function withdraw() public {
   require(!msg.sender.isContract());
   uint amount = balances[msg.sender];

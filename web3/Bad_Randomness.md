@@ -2,7 +2,7 @@
 
 Smart contract below is vulnureable to Bad Randomness (Nothing is secret)
 
-```
+```solidity
 contract Lottery {
   uint public winningNumber;
 
@@ -21,7 +21,7 @@ An attacker could potentially predict the winning number by analyzing the previo
 # How to fix?
 To prevent this vulnerability, the contract should use a secure source of randomness, such as the seededRNG() function from the DS-Random library. Here is an updated version of the contract that uses the seededRNG() function to generate a random winning number:
 
-```
+```solidity
 import "https://github.com/dapphub/ds-random/ds-random.sol";
 
 contract Lottery {

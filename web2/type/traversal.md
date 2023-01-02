@@ -3,7 +3,7 @@
 The code below is vulnureable to Directory traversal
 
 
-```
+```python
 # Get the user-supplied file path
 user_file_path = request.get("file_path")
 
@@ -23,7 +23,7 @@ An attacker could exploit this vulnerability by providing a file path that refer
 # How to fix?
 To prevent this type of attack, the code should include checks to ensure that the user-supplied file path is within the intended directory structure. This can be done by using a whitelist of allowed paths, or by using a regular expression to match only valid paths. For example:
 
-```
+```python
 # Define a whitelist of allowed paths
 ALLOWED_PATHS = [
   "/var/www/public_html/",

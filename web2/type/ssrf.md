@@ -3,7 +3,7 @@
 The code below is vulnureable to Server-side request forgery (SSRF)
 
 
-```
+```go
 package main
 
 import (
@@ -46,7 +46,7 @@ For example, if the user sends a request to http://localhost:8080/?url=http://lo
 # How to fix?
 To prevent this type of attack, it's important to properly validate and sanitize user-provided input before using it to make requests. In this case, you could use the url.Parse() function to parse the URL and check if it is a valid URL before making the request:
 
-```
+```go
 package main
 
 import (

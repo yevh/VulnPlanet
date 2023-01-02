@@ -2,7 +2,7 @@
 
 The code below is vulnureable to Sensitive Data Exposure
 
-```
+```javascript
 // This code is for the login form on the front end
 
 // Read the user's input from the form

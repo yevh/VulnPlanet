@@ -2,7 +2,7 @@
 
 The code below is vulnureable to Prototype pullation
 
-```
+```javascript
 const user = {
   username: 'johndoe',
   password: 'password123'
@@ -22,7 +22,7 @@ This code uses the Object.assign() method to merge an object containing user dat
 # Impact?
 For example, if the user supplies the following object in the request:
 
-```
+```javascript
 data: {
   __proto__: {
     toString: () => 'hacked'
@@ -32,7 +32,7 @@ data: {
 
 The user object will be modified as follows:
 
-```
+```javascript
 user = {
   username: 'johndoe',
   password: 'password123',
@@ -48,7 +48,7 @@ Now, any code that uses the toString() method on the user object will be affecte
 
 To prevent this type of attack, it's important to properly validate and sanitize user-provided input before using it to modify an object. In this case, you could use the Object.getPrototypeOf() method to check if the user-provided object has a prototype, and only merge it with the user object if it doesn't:
 
-```
+```javascript
 const user = {
   username: 'johndoe',
   password: 'password123'

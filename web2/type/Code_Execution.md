@@ -2,7 +2,7 @@
 
 The code below is vulnureable to Code Execution
 
-```
+```ruby
 module Jobs
 
   class ConfirmSnsSubscription < ::Jobs::Base

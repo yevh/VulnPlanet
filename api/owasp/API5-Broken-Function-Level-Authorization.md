@@ -3,7 +3,7 @@
 The code below is vulnureable to Broken Function Level Authorization
 
 
-```
+```javascript
 // This code is for an API endpoint that allows users to access and update their profile information
 
 // Read the user's input from the request

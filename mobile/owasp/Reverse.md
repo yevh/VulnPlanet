@@ -11,7 +11,7 @@ Coverage:
 
 Enable the debugger on an iOS app
 
-```
+```swift
 // Import the necessary modules
 import Foundation
 import UIKit
@@ -71,7 +71,7 @@ This can allow the attacker to gain access to the app's backend systems and stea
 
 The isDebuggerAttached() method is used to check if the debugger is attached to the app. If the debugger is detected, the app is terminated immediately.
 
-```
+```swift
 // Import the necessary modules
 import Foundation
 import UIKit
@@ -119,7 +119,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 PII data from an iOS app through can be still through reverse engineering and string table analysis
 
-```
+```kotlin
 // Import the necessary modules
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -159,7 +159,7 @@ This could potentially be used by an attacker who has discovered the hardcoded c
 
 The ProGuard library is used to obfuscate the strings and variable names. This can make the code even harder to understand and analyze for an attacker, making it more difficult to discover sensitive information, such as the hardcoded database connection string, through string table analysis. 
 
-```
+```kotlin
 // Import the necessary modules
 import java.sql.Connection;
 import java.sql.DriverManager;

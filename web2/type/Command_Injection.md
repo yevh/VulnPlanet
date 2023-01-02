@@ -2,7 +2,7 @@
 
 The code below is vulnureable to Command Injection
 
-```
+```python
 def execute_command(cmd):
   import subprocess
   # Run the command and get the output

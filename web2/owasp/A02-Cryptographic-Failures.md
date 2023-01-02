@@ -11,7 +11,7 @@ The first thing is to determine the protection needs of data in transit and at r
 
 Using weak hashing algorithms
 
-```
+```javascript
 const crypto = require("crypto");
 
 const hash = crypto.createHash('sha1'); // Weak
@@ -19,7 +19,7 @@ const hash = crypto.createHash('sha1'); // Weak
 
 Using weak pseudorandom number generators (PRNGs) 
 
-```
+```javascript
 const val = Math.random(); // Weak
 
 // Check if val is used in a security context.
@@ -29,7 +29,7 @@ const val = Math.random(); // Weak
 
 Safer alternatives, such as SHA-256, SHA-512, SHA-3 are recommended, and for password hashing, it’s even better to use algorithms that do not compute too "quickly", like bcrypt, scrypt, argon2 or pbkdf2 because it slows down brute force attacks.
 
-```
+```javascript
 const crypto = require("crypto");
 
 const hash = crypto.createHash('sha512'); // Compliant
@@ -37,7 +37,7 @@ const hash = crypto.createHash('sha512'); // Compliant
 
 Use a cryptographically strong pseudorandom number generator
 
-```
+```javascript
 // Client side
 
 const crypto = window.crypto || window.msCrypto;

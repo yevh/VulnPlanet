@@ -26,7 +26,7 @@ Node.js does not provide a built-in protection against CSRF attacks; the develop
 
 Express.js CSURF middleware protection is not found on an unsafe HTTP method like POST method.
 
-```
+```javascript
 let csrf = require('csurf');
 let express = require('express');
 
@@ -42,7 +42,7 @@ app.post('/money_transfer', parseForm, function (req, res) {
 
 Protection provided by Express.js CSURF middleware is globally disabled on unsafe methods.
 
-```
+```javascript
 let csrf = require('csurf');
 let express = require('express');
 
@@ -54,7 +54,7 @@ app.use(csrf({ cookie: true, ignoreMethods: ["POST", "GET"] })); // Sensitive as
 
 Express.js CSURF middleware protection is used on unsafe methods.
 
-```
+```javascript
 let csrf = require('csurf');
 let express = require('express');
 
@@ -69,7 +69,7 @@ app.post('/money_transfer', parseForm, csrfProtection, function (req, res) { // 
 
 Protection provided by Express.js CSURF middleware is enabled on unsafe methods.
 
-```
+```javascript
 let csrf = require('csurf');
 let express = require('express');
 
@@ -82,7 +82,7 @@ app.use(csrf({ cookie: true, ignoreMethods: ["GET"] })); // Compliant
 
 Spring Security provides by default a protection against CSRF attacks which can be disabled.
 
-```
+```java
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
@@ -99,7 +99,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 Spring Security CSRF protection is enabled by default, do not disable it.
 
-```
+```java
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
@@ -117,7 +117,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 Booking confirmation form with code snippets shown below
 
-```
+```html
 {%include "header.html" %}
 
 <h1>Confirm hotel booking</h1>
@@ -133,7 +133,7 @@ Booking confirmation form with code snippets shown below
 
 Then the sensitive part is visible as below
 
-```
+```html
 ...
  <p>
     <strong>Credit card #:</strong> {{booking.CardNumber}}
@@ -156,7 +156,7 @@ Then the sensitive part is visible as below
 
 ```gin-csrf``` package is used for prevention.
 
-```
+```go
 ...
 func main() {
 	r := gin.Default()
@@ -179,7 +179,7 @@ func main() {
 
 For a Django application, the code is sensitive when, ```django.middleware.csrf.CsrfViewMiddleware``` is not used in the Django settings.
 
-```
+```python
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -192,7 +192,7 @@ MIDDLEWARE = [
 
 The CSRF protection is disabled on a view:
 
-```
+```python
 @csrf_exempt
 def example(request):
     return HttpResponse("default")
@@ -202,7 +202,7 @@ def example(request):
 
 For a Django application, it is recommended to protect all the views with ```django.middleware.csrf.CsrfViewMiddleware```
 
-```
+```python
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -216,7 +216,7 @@ MIDDLEWARE = [
 
 Not disable the CSRF protection on specific views:
 
-```
+```python
 def example(request):
     return HttpResponse("default")
 ```
@@ -228,7 +228,7 @@ def example(request):
 
 For Laravel VerifyCsrfToken middleware
 
-```
+```php
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as Middleware;
 
 class VerifyCsrfToken extends Middleware
@@ -243,7 +243,7 @@ class VerifyCsrfToken extends Middleware
 
 For Laravel VerifyCsrfToken middleware
 
-```
+```php
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as Middleware;
 
 class VerifyCsrfToken extends Middleware

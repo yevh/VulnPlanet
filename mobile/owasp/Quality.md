@@ -11,7 +11,7 @@ Coverage:
 
 Buffer overflow and a memory leak
 
-```
+```swift
 import Foundation
 
 class User {
@@ -62,7 +62,7 @@ In the worst scenario, it can lead to code execution.
 # How to fix?
 To prevent these vulnerabilities, we can improve the code quality of the app by properly releasing the User object after it is no longer needed, and by checking the length of both the username and password before adding them to the list of users. Here is an updated version of the app that includes these changes:
 
-```
+```swift
 import Foundation
 
 class User {
@@ -109,7 +109,7 @@ In this updated version of the app, the checkCredentials() method filters the li
 
 Buffer overflow and a memory leak
 
-```
+```kotlin
 import android.content.Context;
 import android.util.Log;
 
@@ -174,7 +174,7 @@ In the worst scenario, it can lead to code execution.
 # How to fix?
 To prevent these vulnerabilities, we can improve the code quality of the app by properly releasing the User object after it is no longer needed, and by checking the length of both the username and password before adding them to the list of users. Here is an updated version of the app that includes these changes:
 
-```
+```kotlin
 import android.content.Context;
 import android.util.Log;
 

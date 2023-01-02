@@ -11,7 +11,7 @@ Coverage:
 
 Failing to validate the actor ID associated with a bearer token
 
-```
+```swift
 import Foundation
 
 class APIRequest {
@@ -37,7 +37,7 @@ An attacker can modify the actor ID and access account information of other user
 # How to fix?
 To prevent this vulnerability, the app should validate the actor ID associated with the bearer token to ensure that only authorized users can access the requested account information. Here is an updated version of the app that includes this validation:
 
-```
+```kotlin
 import Foundation
 
 class APIRequest {
@@ -79,7 +79,7 @@ In this updated version of the app, the send() method calls the verifyActorID() 
 
 Failing to validate the actor ID associated with a bearer token
 
-```
+```kotlin
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.net.HttpURLConnection
@@ -111,7 +111,7 @@ An acttacker can modify the actor ID and access account information of other use
 # How to fix?
 To prevent this vulnerability, the app should validate the actor ID associated with the bearer token to ensure that only authorized users can access the requested account information. Here is an updated version of the app that includes this validation:
 
-```
+```kotlin
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.net.HttpURLConnection

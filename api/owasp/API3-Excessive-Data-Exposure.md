@@ -3,7 +3,7 @@
 The code below is vulnureable to Excessive Data Exposure
 
 
-```
+```javascript
 // This code is for an API endpoint that allows users to view their profile information
 
 // Check if the user is authenticated

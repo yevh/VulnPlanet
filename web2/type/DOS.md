@@ -3,7 +3,7 @@
 The code below is vulnureable to Denial Of Service
 
 
-```
+```python
 def handle_request(request):
   # Do some processing on the request
 

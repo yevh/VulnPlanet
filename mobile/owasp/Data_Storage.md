@@ -11,7 +11,7 @@ Coverage:
 
 Storing user credentials in a plain text SQLite database
 
-```
+```swift
 import UIKit
 import SQLite
 
@@ -37,7 +37,7 @@ Storing sensitive information, such as passwords, in plain text is insecure beca
 # How to fix?
 To prevent this vulnerability, the app should encrypt the user's credentials before storing them in the database. This ensures that the credentials are protected and cannot be accessed by anyone without the proper encryption key. Here is an updated version of the app that encrypts the user's credentials before storing them in the database:
 
-```
+```swift
 import UIKit
 import SQLite
 import CryptoSwift
@@ -64,7 +64,7 @@ In this updated version of the app, the login() method encrypts the user's passw
 
 Storing user credentials in a plain text SQLite database
 
-```
+```kotlin
 import android.app.Activity
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
@@ -89,7 +89,7 @@ Storing sensitive information, such as passwords, in plain text is insecure beca
 # How to fix?
 To prevent this vulnerability, the app should encrypt the user's credentials before storing them in the database. This ensures that the credentials are protected and cannot be accessed by anyone without the proper encryption key. Here is an updated version of the app that encrypts the user's credentials before storing them in the database:
 
-```
+```kotlin
 import android.app.Activity
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper

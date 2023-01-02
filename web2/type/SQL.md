@@ -2,7 +2,7 @@
 
 The code below is vulnureable to SQL Injection
 
-```
+```javascript
 const mysql = require('mysql');
 const connection = mysql.createConnection({
   host: 'localhost',
@@ -30,13 +30,13 @@ This code uses the MySQL Node.js driver to connect to a MySQL database and searc
 # Impact?
 For example, if the user supplies the following value for the username parameter:
 
-```
+```javascript
 username: ' OR 1=1--
 ```
 
 The SELECT statement will be constructed as follows:
 
-```
+```javascript
 SELECT * FROM users WHERE username = '' OR 1=1--'
 ```
 
@@ -46,7 +46,7 @@ This query will return all rows from the users table, allowing the attacker to r
 
 To prevent this type of attack, it's important to properly validate and sanitize user-provided input before using it in a SQL query. In this case, you could use the mysql.escape() function to escape special characters in the username parameter:
 
-```
+```javascript
 const mysql = require('mysql');
 const connection = mysql.createConnection({
   host: 'localhost',

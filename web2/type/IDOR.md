@@ -3,7 +3,7 @@
 The code below is vulnureable to IDOR
 
 
-```
+```php
 <?php
 
 require_once('../_helpers/strip.php');

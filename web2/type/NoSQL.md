@@ -2,7 +2,7 @@
 
 The code below is vulnureable to NoSQL Injection
 
-```
+```javascript
 const MongoClient = require('mongodb').MongoClient;
 
 // Connect to the MongoDB database
@@ -31,13 +31,13 @@ This code uses the MongoDB Node.js driver to connect to a MongoDB database and s
 # Impact?
 For example, if the user supplies the following value for the username parameter:
 
-```
+```javascript
 username: {$gt: ''}
 ```
 
 The find() method will construct the following query:
 
-```
+```javascript
 {
   username: {$gt: ''}
 }
@@ -49,7 +49,7 @@ This query will match all documents in the users collection, allowing the attack
 
 To prevent this type of attack, it's important to properly validate and sanitize user-provided input before using it in a NoSQL query. In this case, you could use a regular expression to ensure that the username parameter only contains allowed characters, such as letters, numbers, and underscores:
 
-```
+```javascript
 const MongoClient = require('mongodb').MongoClient;
 
 MongoClient.connect('mongodb://localhost:27017/test', (err, db) => {

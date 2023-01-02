@@ -2,7 +2,7 @@
 
 The code below is vulnureable to Buffer Overflow
 
-```
+```c
 char str1[10];
 char str2[]="text";
 strcpy(str1,str2);
