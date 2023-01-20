@@ -50,7 +50,7 @@ class Encryptor {
 ```
 
 # Why it's vulnerable?
-In this app, the encrypt() method uses the insecure DES algorithm to encrypt the given data using the specified key. This app is vulnerable to insufficient cryptography because the DES algorithm is no longer considered secure due to its small key size and other weaknesses.
+In this app, the ```encrypt()``` method uses the insecure DES algorithm to encrypt the given data using the specified key. This app is vulnerable to insufficient cryptography because the DES algorithm is no longer considered secure due to its small key size and other weaknesses.
 
 # Impact?
 An attacker could exploit this vulnerability by using a known plaintext attack to recover the encryption key and decrypt the sensitive data. This could expose the app's users to privacy and security risks if the encrypted data contains sensitive information such as passwords or financial data.
@@ -96,7 +96,7 @@ class Encryptor {
 }
 ```
 
-In this updated version of the app, the encrypt() method uses the AES algorithm to encrypt the data.
+In this updated version of the app, the ```encrypt()``` method uses the AES algorithm to encrypt the data.
 
 # Android
 
@@ -119,7 +119,7 @@ class Encryptor {
 ```
 
 # Why it's vulnerable?
-In this app, the encrypt() method uses the insecure DES algorithm to encrypt the given data using the specified key. This app is vulnerable to insufficient cryptography because the DES algorithm is no longer considered secure due to its small key size and other weaknesses.
+In this app, the ```encrypt()``` method uses the insecure DES algorithm to encrypt the given data using the specified key. This app is vulnerable to insufficient cryptography because the DES algorithm is no longer considered secure due to its small key size and other weaknesses.
 
 # Impact?
 An attacker could exploit this vulnerability by using a known plaintext attack to recover the encryption key and decrypt the sensitive data. This could expose the app's users to privacy and security risks if the encrypted data contains sensitive information such as passwords or financial data.
@@ -143,4 +143,4 @@ class Encryptor {
 }
 ```
 
-In this updated version of the app, the encrypt() method uses the AES algorithm to encrypt the data.
+In this updated version of the app, the ```encrypt()``` method uses the AES algorithm to encrypt the data.
