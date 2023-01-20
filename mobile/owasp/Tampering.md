@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
 ```
 
 # Why it's vulnerable?
-This code checks if the device is rooted and displays a message accordingly, but the isRooted() method always returns false, so it does not actually detect if the device is rooted or not. This means that even if the device is rooted, the code will not detect it, allowing for potential code tampering.
+This code checks if the device is rooted and displays a message accordingly, but the ```isRooted()``` method always returns false, so it does not actually detect if the device is rooted or not. This means that even if the device is rooted, the code will not detect it, allowing for potential code tampering.
 
 # Impact?
 Rooting gives hackers full control to perform system-wide operations on a device – full stop. They can modify the OS, run scripts that grab data stored in shared areas of the file system, they can even compromise non-shared areas (like app sandbox), etc
