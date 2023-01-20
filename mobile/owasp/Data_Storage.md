@@ -29,7 +29,7 @@ class ViewController: UIViewController {
 ```
 
 # Why it's vulnerable?
-In this app, the login() method is called when the user enters their credentials and logs in to the app. The username and password are then stored in a SQLite database using the SQLite library. However, this app is vulnerable to insecure data storage because it stores the user's credentials in a plain text database.
+In this app, the ```login()``` method is called when the user enters their credentials and logs in to the app. The username and password are then stored in a SQLite database using the SQLite library. However, this app is vulnerable to insecure data storage because it stores the user's credentials in a plain text database.
 
 # Impact?
 Storing sensitive information, such as passwords, in plain text is insecure because it can be accessed by anyone who has access to the database file. In this case, an attacker who gains access to the device could easily extract the user's credentials from the database.
@@ -58,7 +58,7 @@ class ViewController: UIViewController {
 }
 ```
 
-In this updated version of the app, the login() method encrypts the user's password using the AES algorithm and a secret encryption key before storing it in the database. This ensures that the password is encrypted and cannot be accessed by anyone without the proper encryption key. 
+In this updated version of the app, the ```login()``` method encrypts the user's password using the AES algorithm and a secret encryption key before storing it in the database. This ensures that the password is encrypted and cannot be accessed by anyone without the proper encryption key. 
 
 # Android
 
@@ -81,7 +81,7 @@ class MainActivity : Activity() {
 ```
 
 # Why it's vulnerable?
-In this app, the login() method is called when the user enters their credentials and logs in to the app. The username and password are then stored in a SQLite database using the SQLiteOpenHelper class. However, this app is vulnerable to insecure data storage because it stores the user's credentials in a plain text database.
+In this app, the ```login()``` method is called when the user enters their credentials and logs in to the app. The username and password are then stored in a SQLite database using the SQLiteOpenHelper class. However, this app is vulnerable to insecure data storage because it stores the user's credentials in a plain text database.
 
 # Impact?
 Storing sensitive information, such as passwords, in plain text is insecure because it can be accessed by anyone who has access to the database file. In this case, an attacker who gains access to the device could easily extract the user's credentials from the database.
