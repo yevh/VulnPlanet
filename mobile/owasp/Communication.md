@@ -32,7 +32,7 @@ class ConnectionManager {
 ```
 
 # Why it's vulnerable?
-In this app, the ConnectionManager class is used to establish a secure connection to a server using TLS. The connect() method creates a NWConnection object and uses the .tls parameter to specify that the connection should be encrypted using TLS. However, this app is vulnerable to insecure communication because it does not inspect the server's certificate during the TLS handshake.
+In this app, the ConnectionManager class is used to establish a secure connection to a server using TLS. The ```connect()``` method creates a NWConnection object and uses the .tls parameter to specify that the connection should be encrypted using TLS. However, this app is vulnerable to insecure communication because it does not inspect the server's certificate during the TLS handshake.
 
 # Impact?
 By default, the NWConnection class will unconditionally accept any certificate offered by the server during the TLS handshake. This means that an attacker who is able to intercept the connection and offer a forged certificate can impersonate the server and establish a man-in-the-middle attack. This destroys the mutual authentication capability of TLS and leaves the app vulnerable to attacks.
@@ -117,4 +117,4 @@ class MainActivity : Activity() {
 }
 ```
 
-In this updated version of the app, the connect() method uses the system's default trust store to verify the server's certificate during the TLS handshake. This ensures that the app only establishes a connection with the authentic server and not with an attacker who is using a forged certificate. This eliminates the insecure communication vulnerability and ensures that the app is protected against man-in-the-middle attacks.
+In this updated version of the app, the ```connect()``` method uses the system's default trust store to verify the server's certificate during the TLS handshake. This ensures that the app only establishes a connection with the authentic server and not with an attacker who is using a forged certificate. This eliminates the insecure communication vulnerability and ensures that the app is protected against man-in-the-middle attacks.
