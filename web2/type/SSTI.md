@@ -23,7 +23,7 @@ if __name__ == '__main__':
 This code sets up a Flask app with a single route that renders a page using the user-provided message parameter as the title of the page. However, if the user supplies a message containing template code, it will be executed on the server when the page is rendered.
 
 # Impact?
-For example, if a user sends a request to http://localhost:5000/?message={{config.SECRET_KEY}}, the page will display the value of the SECRET_KEY configuration variable.
+For example, if a user sends a request to ```http://localhost:5000/?message={{config.SECRET_KEY}}```, the page will display the value of the SECRET_KEY configuration variable.
 
 # How to fix?
 To prevent this type of attack, it's important to properly sanitize user-provided input to ensure it doesn't contain any malicious code. In this case, you could use the escape function provided by the Jinja2 template engine to escape any special characters in the message before rendering it on the page:
