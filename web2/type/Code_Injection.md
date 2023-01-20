@@ -18,7 +18,7 @@ print(result)
 ```
 
 # Why it's vulnerable?
-The execute_code function takes a string of Python code as input and evaluates it using the eval function. This is a common mistake as the eval function can execute any code passed to it, which makes the application vulnerable to code injection attacks.
+The ```execute_code``` function takes a string of Python code as input and evaluates it using the eval function. This is a common mistake as the eval function can execute any code passed to it, which makes the application vulnerable to code injection attacks.
 
 # Impact?
 An attacker could enter the following code as input: 
