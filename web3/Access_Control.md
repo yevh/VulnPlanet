@@ -46,7 +46,7 @@ In this contract, the ```WalletLibrary``` contract is intended to be used as a l
 An attacker could exploit this vulnerability by calling the ```initWallet()``` function with themselves as the owner, allowing them to create a new Wallet contract that they own and control.
 
 # How to fix?
-To prevent this vulnerability, the ```initWallet()``` function should be updated to properly check the caller's permissions before allowing them to create a new ```Wallet``` contract. For example, the function could be updated to only allow the contract's owner to create new Wallet contracts, as shown in the following example:
+To prevent this vulnerability, the ```initWallet()``` function should be updated to properly check the caller's permissions before allowing them to create a new Wallet contract. For example, the function could be updated to only allow the contract's owner to create new Wallet contracts, as shown in the following example:
 
 ```solidity
 function initWallet(address _owner) public {
