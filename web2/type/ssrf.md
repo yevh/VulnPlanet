@@ -41,10 +41,10 @@ func main() {
 This code sets up a simple HTTP server that uses the net/http package to make a request to a URL provided by the user in the query string. However, if the user supplies a malicious URL, they can use the server to make unauthorized requests to internal network resources.
 
 # Impact?
-For example, if the user sends a request to http://localhost:8080/?url=http://localhost:8080/secret, the server will make a request to the /secret endpoint on localhost:8080, potentially allowing the attacker to access sensitive information or perform unauthorized actions on the internal network.
+For example, if the user sends a request to ```http://localhost:8080/?url=http://localhost:8080/secret```, the server will make a request to the /secret endpoint on localhost:8080, potentially allowing the attacker to access sensitive information or perform unauthorized actions on the internal network.
 
 # How to fix?
-To prevent this type of attack, it's important to properly validate and sanitize user-provided input before using it to make requests. In this case, you could use the url.Parse() function to parse the URL and check if it is a valid URL before making the request:
+To prevent this type of attack, it's important to properly validate and sanitize user-provided input before using it to make requests. In this case, you could use the ```url.Parse()``` function to parse the URL and check if it is a valid URL before making the request:
 
 ```go
 package main
