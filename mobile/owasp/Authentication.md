@@ -35,7 +35,7 @@ class ServiceManager {
 ```
 
 # Why it's vulnerable?
-In this app, the ServiceManager class is used to send service requests to the app's backend server. The sendRequest() method sends the specified request to the server over a secure TLS connection. However, this app is vulnerable to insecure authentication because it does not verify that the incoming request is associated with a known user.
+In this app, the ServiceManager class is used to send service requests to the app's backend server. The ```sendRequest()``` method sends the specified request to the server over a secure TLS connection. However, this app is vulnerable to insecure authentication because it does not verify that the incoming request is associated with a known user.
 
 # Impact?
 An attacker could exploit this vulnerability by sending service requests to the app's backend server and anonymously executing functionality that affects legitimate users of the app. For example, an attacker could send a request that triggers a denial of service attack or modifies the app's data in a way that affects the legitimate users.
@@ -74,7 +74,7 @@ class ServiceManager {
 }
 ```
 
-In this updated version of the app, the sendRequest() method verifies that the user ID and session key provided by the caller match a known authenticated user. This ensures that only authenticated users are able to send service requests to the app's backend server. If the user ID and session key are invalid or do not match a known authenticated user, the request is not sent to the server. This eliminates the insecure authentication vulnerability and prevents attackers from anonymously executing functionality on the app's backend server.
+In this updated version of the app, the ```sendRequest()``` method verifies that the user ID and session key provided by the caller match a known authenticated user. This ensures that only authenticated users are able to send service requests to the app's backend server. If the user ID and session key are invalid or do not match a known authenticated user, the request is not sent to the server. This eliminates the insecure authentication vulnerability and prevents attackers from anonymously executing functionality on the app's backend server.
 
 # Android
 
@@ -96,7 +96,7 @@ class MainActivity : Activity() {
 ```
 
 # Why it's vulnerable?
-In this app, the sendRequest() method sends a service request to the app's backend server. The request is sent over an HTTP connection, but the app is vulnerable to insecure authentication because it does not verify that the incoming request is associated with a known user.
+In this app, the ```sendRequest()``` method sends a service request to the app's backend server. The request is sent over an HTTP connection, but the app is vulnerable to insecure authentication because it does not verify that the incoming request is associated with a known user.
 
 # Impact?
 An attacker could exploit this vulnerability by sending service requests to the app's backend server and anonymously executing functionality that affects legitimate users of the app. For example, an attacker could send a request that triggers a denial of service attack or modifies the app's data in a way that affects the legitimate users.
@@ -127,4 +127,4 @@ class MainActivity : Activity() {
 }
 ```
 
-In this updated version of the app, the sendRequest() method verifies that the user ID and session key provided by the caller match a known authenticated user. This ensures that only authenticated users are able to send service requests to the app's backend server. If the user ID and session key are invalid or do not match a known authenticated user, the request is not sent to the server. This eliminates the insecure authentication vulnerability and prevents attackers from anonymously executing functionality on the app's backend server.
+In this updated version of the app, the ```sendRequest()``` method verifies that the user ID and session key provided by the caller match a known authenticated user. This ensures that only authenticated users are able to send service requests to the app's backend server. If the user ID and session key are invalid or do not match a known authenticated user, the request is not sent to the server. This eliminates the insecure authentication vulnerability and prevents attackers from anonymously executing functionality on the app's backend server.
