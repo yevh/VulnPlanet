@@ -78,4 +78,4 @@ MongoClient.connect('mongodb://localhost:27017/test', (err, db) => {
 });
 ```
 
-This code uses a regular expression to validate the username parameter before using it in the find() method. If the username contains any characters that are not allowed by the regular expression, the request will be rejected with a bad request error. This will prevent NoSQL injection attacks by ensuring that the username parameter can't be used to construct a malicious query.
+This code uses a regular expression to validate the username parameter before using it in the ```find()``` method. If the username contains any characters that are not allowed by the regular expression, the request will be rejected with a bad request error. This will prevent NoSQL injection attacks by ensuring that the username parameter can't be used to construct a malicious query.

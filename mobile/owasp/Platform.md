@@ -25,7 +25,7 @@ class ViewController: UIViewController {
 ```
 
 # Why it's vulnerable?
-In this app, the saveButtonTapped() method is called when the user taps a button to save their password. The password is then stored in the app's local storage using the UserDefaults class. However, this app is vulnerable to an M1: Improper Platform Usage vulnerability because it uses app local storage to store sensitive data, such as passwords.
+In this app, the ```saveButtonTapped()``` method is called when the user taps a button to save their password. The password is then stored in the app's local storage using the UserDefaults class. However, this app is vulnerable to an M1: Improper Platform Usage vulnerability because it uses app local storage to store sensitive data, such as passwords.
 
 # Impact?
 App local storage is not secure and can be accessed by other apps on the device or by attackers who have gained access to the device. This means that the user's password could be compromised if the device is lost or stolen, or if the app is hacked.
@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity() {
 ```
 
 # Why it's vulnerable?
-The savePassword() method is called to save the user's password to shared preferences. However, this app is vulnerable to an M1: Improper Platform Usage vulnerability because it uses shared preferences to store sensitive information, such as passwords.
+The ```savePassword()``` method is called to save the user's password to shared preferences. However, this app is vulnerable to an M1: Improper Platform Usage vulnerability because it uses shared preferences to store sensitive information, such as passwords.
 
 # Impact?
 Shared preferences are not secure and can be accessed by other apps on the device or by attackers who have gained access to the device. This means that the user's password could be compromised if the device is lost or stolen, or if the app is hacked.
@@ -113,4 +113,4 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-In this updated version of the app, the savePassword() method encrypts the user's password using the AES algorithm and the device's hardware-backed keystore. The encrypted password is then stored in the keystore using the setEntry() method. This ensures that the password is encrypted and protected by the device.
+In this updated version of the app, the ```savePassword()``` method encrypts the user's password using the AES algorithm and the device's hardware-backed keystore. The encrypted password is then stored in the keystore using the ```setEntry()``` method. This ensures that the password is encrypted and protected by the device.

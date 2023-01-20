@@ -67,4 +67,4 @@ app.listen(port, () => {
 });
 ```
 
-The code is setting up an API server using the express library. The code enables CORS, but only for specific trusted clients that are listed in the allowedOrigins array.
+The code is setting up an API server using the express library. The code enables CORS, but only for specific trusted clients that are listed in the ```allowedOrigins``` array.

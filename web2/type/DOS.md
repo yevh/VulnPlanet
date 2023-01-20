@@ -18,7 +18,7 @@ def handle_request(request):
 
 
 # Why it's vulnerable?
-In this example, the handle_request function is responsible for processing incoming requests. It checks to see if the user has exceeded their maximum allowed requests, and if they have, it returns an error message. However, this code is vulnerable to a DoS attack because it doesn't put a limit on the number of requests that a user can make in a given time period. 
+In this example, the ```handle_request``` function is responsible for processing incoming requests. It checks to see if the user has exceeded their maximum allowed requests, and if they have, it returns an error message. However, this code is vulnerable to a DoS attack because it doesn't put a limit on the number of requests that a user can make in a given time period. 
 
 # Impact?
 An attacker could exploit this vulnerability by making a large number of requests in a short amount of time, causing the system to become overwhelmed and unable to process legitimate requests.

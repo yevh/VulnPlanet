@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 ```
 
 # Why it's vulnerable?
-it includes a hidden interface (the showAdminDashboard() method) that can access the administrative dashboard and back-end API server, but it does not include any code to display the dashboard.
+it includes a hidden interface (the ```showAdminDashboard()``` method) that can access the administrative dashboard and back-end API server, but it does not include any code to display the dashboard.
 
 # Impact?
 This allows an attacker to discover the administrative REST endpoint URL through string table analysis and use it to execute back-end administrative functionality using curl. This can allow the attacker to access sensitive information and perform unauthorized actions on the backend server.
@@ -112,14 +112,14 @@ class MainActivity: Activity() {
 ```
 
 # Why it's vulnerable?
-It includes a hidden interface (the showAdminDashboard() method) that can access the administrative dashboard, but it does not include any code to display the dashboard.
+It includes a hidden interface (the ```showAdminDashboard()``` method) that can access the administrative dashboard, but it does not include any code to display the dashboard.
 
 # Impact?
 This allows an attacker to discover the administrative REST endpoint URL through string table analysis and use it to execute back-end administrative functionality using curl. This can allow the attacker to access sensitive information and perform unauthorized actions on the backend server.
 
 # How to fix?
 
-In this code, the showAdminDashboard() method is marked as deprecated using the @Deprecated annotation. This will prevent the method from being called and will generate a warning if it is used. This makes it less likely for an attacker to discover and exploit the hidden interface. Additionally, the method could be removed altogether to completely eliminate the vulnerability.
+In this code, the ```showAdminDashboard()``` method is marked as deprecated using the @Deprecated annotation. This will prevent the method from being called and will generate a warning if it is used. This makes it less likely for an attacker to discover and exploit the hidden interface. Additionally, the method could be removed altogether to completely eliminate the vulnerability.
 
 ```kotlin
 // Import the necessary modules

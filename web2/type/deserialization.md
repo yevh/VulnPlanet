@@ -52,10 +52,10 @@ public class InsecureDeserialization {
 ```
 
 # Why it's vulnerable?
-This code defines a MaliciousObject class that implements the Serializable interface. The class contains a readObject() method that will be executed when the object is deserialized. 
+This code defines a MaliciousObject class that implements the Serializable interface. The class contains a ```readObject()``` method that will be executed when the object is deserialized. 
 
 # Impact?
-The attacker could create an instance of the MaliciousObject class and serialize it to a byte array:
+The attacker could create an instance of the ```MaliciousObject``` class and serialize it to a byte array:
 
 ```java
 MaliciousObject payload = new MaliciousObject();
@@ -67,7 +67,7 @@ The attacker could then send the serialized object to the victim, who would dese
 Object object = fromByteArray(bytes);
 ```
 
-When the victim deserializes the object, the code in the readObject() method will be executed, printing the message and exiting the program. This could allow the attacker to gain unauthorized access to the victim's system or perform other malicious actions.
+When the victim deserializes the object, the code in the ```readObject()``` method will be executed, printing the message and exiting the program. This could allow the attacker to gain unauthorized access to the victim's system or perform other malicious actions.
 
 # How to fix?
 To prevent this type of attack, it's important to properly validate and sanitize user-provided input before deserializing it. This could involve using a whitelist of classes that are allowed to be deserialized. For example:

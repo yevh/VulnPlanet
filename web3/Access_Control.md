@@ -40,13 +40,13 @@ contract Wallet {
 ```
 
 # Why it's vulnerable?
-In this contract, the WalletLibrary contract is intended to be used as a library to create new Wallet contracts. The initWallet() function is only supposed to be called by the contract's owner, and it is used to create a new Wallet contract with the specified owner. However, this contract is vulnerable to an access control vulnerability because the initWallet() function does not properly check the caller's permissions before creating a new Wallet contract.
+In this contract, the ```WalletLibrary``` contract is intended to be used as a library to create new Wallet contracts. The ```initWallet()``` function is only supposed to be called by the contract's owner, and it is used to create a new Wallet contract with the specified owner. However, this contract is vulnerable to an access control vulnerability because the ```initWallet()``` function does not properly check the caller's permissions before creating a new Wallet contract.
 
 # Impact?
-An attacker could exploit this vulnerability by calling the initWallet() function with themselves as the owner, allowing them to create a new Wallet contract that they own and control.
+An attacker could exploit this vulnerability by calling the ```initWallet()``` function with themselves as the owner, allowing them to create a new Wallet contract that they own and control.
 
 # How to fix?
-To prevent this vulnerability, the initWallet() function should be updated to properly check the caller's permissions before allowing them to create a new Wallet contract. For example, the function could be updated to only allow the contract's owner to create new Wallet contracts, as shown in the following example:
+To prevent this vulnerability, the ```initWallet()``` function should be updated to properly check the caller's permissions before allowing them to create a new Wallet contract. For example, the function could be updated to only allow the contract's owner to create new Wallet contracts, as shown in the following example:
 
 ```solidity
 function initWallet(address _owner) public {

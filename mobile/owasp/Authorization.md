@@ -29,7 +29,7 @@ class APIRequest {
 ```
 
 # Why it's vulnerable?
-In this app, the send() method sends a request to the specified API endpoint with the given actor ID and bearer token. However, the app does not validate the actor ID associated with the bearer token.
+In this app, the ```send()``` method sends a request to the specified API endpoint with the given actor ID and bearer token. However, the app does not validate the actor ID associated with the bearer token.
 
 # Impact?
 An attacker can modify the actor ID and access account information of other users.
@@ -73,7 +73,7 @@ class APIRequest {
 }
 ```
 
-In this updated version of the app, the send() method calls the verifyActorID() method to validate the actor ID associated with the bearer token before sending the request. The verifyActorID() method queries the database to look up the actor ID associated with the token and compares it to the expected actor ID. If the actor IDs do not match, the request is not sent and an error message is printed. 
+In this updated version of the app, the ```send()``` method calls the ```verifyActorID()``` method to validate the actor ID associated with the bearer token before sending the request. The ```verifyActorID()``` method queries the database to look up the actor ID associated with the token and compares it to the expected actor ID. If the actor IDs do not match, the request is not sent and an error message is printed. 
 
 # Android
 
@@ -103,7 +103,7 @@ class APIRequest {
 ```
 
 # Why it's vulnerable?
-In this app, the send() method sends a request to the specified API endpoint with the given actor ID and bearer token. However, the app does not validate the actor ID associated with the bearer token.
+In this app, the ```send()``` method sends a request to the specified API endpoint with the given actor ID and bearer token. However, the app does not validate the actor ID associated with the bearer token.
 
 # Impact?
 An acttacker can modify the actor ID and access account information of other users.
@@ -153,4 +153,4 @@ class APIRequest {
 }
 ```
 
-In this updated version of the app, the send() method calls the verifyActorID() method to validate the actor ID associated with the bearer token before sending the request. The verifyActorID() method queries the database to look up the actor ID associated with the token and compares it to the expected actor ID. If the actor IDs do not match, the request is not sent and an error message is printed. 
+In this updated version of the app, the ```send()``` method calls the ```verifyActorID()``` method to validate the actor ID associated with the bearer token before sending the request. The ```verifyActorID()``` method queries the database to look up the actor ID associated with the token and compares it to the expected actor ID. If the actor IDs do not match, the request is not sent and an error message is printed. 

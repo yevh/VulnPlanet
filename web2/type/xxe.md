@@ -33,7 +33,7 @@ For example, if the user supplies the following XML data in the request:
 </data>
 ```
 
-The xml2js parser will try to read the /etc/passwd file on the server and include its contents in the secret element of the parsed data. This could potentially expose sensitive information, such as user account details, to the attacker.
+The xml2js parser will try to read the ```/etc/passwd``` file on the server and include its contents in the secret element of the parsed data. This could potentially expose sensitive information, such as user account details, to the attacker.
 
 # How to fix?
 

@@ -33,7 +33,7 @@ fetch("http://example.com/login", {
 ```
 
 # Why it's vulnerable?
-The code is sending a request to the backend with the user's credentials and an authentication token. However, the token is included in a comment in the code, which means it is potentially visible to anyone who has access to the JavaScript file.
+The code is sending a request to the backend with the user's credentials and an authentication token. However, the ```token``` is included in a comment in the code, which means it is potentially visible to anyone who has access to the JavaScript file.
 
 # Impact?
 This could allow an attacker to see the token and potentially use it to gain unauthorized access to the backend.

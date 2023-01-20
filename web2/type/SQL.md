@@ -44,7 +44,7 @@ This query will return all rows from the users table, allowing the attacker to r
 
 # How to fix?
 
-To prevent this type of attack, it's important to properly validate and sanitize user-provided input before using it in a SQL query. In this case, you could use the mysql.escape() function to escape special characters in the username parameter:
+To prevent this type of attack, it's important to properly validate and sanitize user-provided input before using it in a SQL query. In this case, you could use the ```mysql.escape()``` function to escape special characters in the username parameter:
 
 ```javascript
 const mysql = require('mysql');
@@ -70,4 +70,4 @@ connection.query(query, (err, result) => {
 });
 ```
 
-This code uses the mysql.escape() function to escape any special characters in the username parameter before using it in the SELECT statement. This will prevent SQL injection attacks by ensuring that the username parameter can't be used to construct a malicious query.
+This code uses the ```mysql.escape()``` function to escape any special characters in the username parameter before using it in the SELECT statement. This will prevent SQL injection attacks by ensuring that the username parameter can't be used to construct a malicious query.

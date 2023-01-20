@@ -17,7 +17,7 @@ An application is vulnerable to attack when:
 
 ## Vulnureable code example
 
-Node.js provides several ways to execute external programs as part of the child_process package. The exec method spawns a shell then executes the command within that shell. the execSync (synchronous version of exec) to run a system command with unsanitized user input.
+Node.js provides several ways to execute external programs as part of the ```child_process``` package. The exec method spawns a shell then executes the command within that shell. the execSync (synchronous version of exec) to run a system command with unsanitized user input.
 
 ```javascript
 const output = child_process.execSync(`ping -c 1 '${destination}'`);
@@ -25,7 +25,7 @@ const output = child_process.execSync(`ping -c 1 '${destination}'`);
 
 ## Prevention code example
 
-. If this is not possible, execution of external commands should be handled by using other methods (execFile and spawn) to directly invoke the desired command, instead of by invoking a system shell.
+If this is not possible, execution of external commands should be handled by using other methods (execFile and spawn) to directly invoke the desired command, instead of by invoking a system shell.
 
 ```javascript
 const output = child_process.spawnSync('ping', ['-c', '1', destination]);
@@ -36,7 +36,7 @@ const output = child_process.spawnSync('ping', ['-c', '1', destination]);
 
 ## Vulnureable code example
 
-Java method invokes Runtime.exec(), which receives unsanitized data originating from the environment, making this code susceptible to a command injection attack.
+Java method invokes ```Runtime.exec()```, which receives unsanitized data originating from the environment, making this code susceptible to a command injection attack.
 
 ```java
 public static void listFiles(String dir) throws Exception {
@@ -57,7 +57,7 @@ public static void listFiles(String dir) throws Exception {
 
 ## Prevention code example
 
-Sanitize the untrusted user input by permitting only a small group of allowed characters in the argument that will be passed to Runtime.exec(); all other characters are excluded.
+Sanitize the untrusted user input by permitting only a small group of allowed characters in the argument that will be passed to ```Runtime.exec();``` all other characters are excluded.
 
 ```java
 // ...

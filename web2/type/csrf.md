@@ -64,7 +64,7 @@ For example, if the attacker creates a page with the following HTML and JavaScri
 </script>
 ```
 
-And then tricks a logged-in user into visiting the page, the form will be automatically submitted and the attacker's username and password will be sent to the /login route on the victim's server. If the attacker's credentials are valid, the login action will authenticate the attacker and set the session flag, allowing the attacker to perform actions.
+And then tricks a logged-in user into visiting the page, the form will be automatically submitted and the attacker's username and password will be sent to the ```/login``` route on the victim's server. If the attacker's credentials are valid, the login action will authenticate the attacker and set the session flag, allowing the attacker to perform actions.
 
 # How to fix?
 

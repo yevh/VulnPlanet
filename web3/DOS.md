@@ -20,13 +20,13 @@ contract FundTransfer {
 ```
 
 # Why it's vulnerable?
-This contract allows users to transfer funds to each other. However, it is vulnerable to a DoS attack because the transfer() function performs a large number of expensive computations, which can cause the gas limit to be reached.
+This contract allows users to transfer funds to each other. However, it is vulnerable to a DoS attack because the ```transfer()``` function performs a large number of expensive computations, which can cause the gas limit to be reached.
 
 # Impact?
 If the gas limit is reached, the transaction will fail and the funds will not be transferred.
 
 # How to fix?
-To prevent this vulnerability, the transfer() function should be updated to avoid performing expensive computations that could cause the gas limit to be reached. Here is an updated version of the contract that avoids expensive computations:
+To prevent this vulnerability, the ```transfer()``` function should be updated to avoid performing expensive computations that could cause the gas limit to be reached. Here is an updated version of the contract that avoids expensive computations:
 
 ```solidity
 contract FundTransfer {
@@ -40,4 +40,4 @@ contract FundTransfer {
 }
 ```
 
-In this updated version of the contract, the transfer() function does not perform any expensive computations, which means that it will not cause the gas limit to be reached. This prevents the contract from being vulnerable to a DoS attack.
+In this updated version of the contract, the ```transfer()``` function does not perform any expensive computations, which means that it will not cause the gas limit to be reached. This prevents the contract from being vulnerable to a DoS attack.

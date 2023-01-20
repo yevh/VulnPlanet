@@ -69,7 +69,7 @@ This can allow the attacker to gain access to the app's backend systems and stea
 
 # How to fix?
 
-The isDebuggerAttached() method is used to check if the debugger is attached to the app. If the debugger is detected, the app is terminated immediately.
+The ```isDebuggerAttached()``` method is used to check if the debugger is attached to the app. If the debugger is detected, the app is terminated immediately.
 
 ```swift
 // Import the necessary modules
