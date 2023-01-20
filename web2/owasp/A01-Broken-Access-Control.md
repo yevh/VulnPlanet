@@ -83,7 +83,7 @@ http
 
 ## Vulnureable code example
 
-Administrative functionality that allows a user list to be shown when a specific URL is called. The /admin/users URI is available to everyone who provides a cookie with the name set to a username. A malicious actor could manipulate the HTTP request and add the Cookie header without performing a successful authentication. Since the authentication routine only checks for the presence of the username cookie, access is granted.
+Administrative functionality that allows a user list to be shown when a specific URL is called. The ```/admin/users``` URI is available to everyone who provides a cookie with the name set to a username. A malicious actor could manipulate the HTTP request and add the Cookie header without performing a successful authentication. Since the authentication routine only checks for the presence of the username cookie, access is granted.
 
 ```go
 func Users(w http.ResponseWriter, r * http.Request) {
