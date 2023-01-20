@@ -28,7 +28,7 @@ app.listen(3000);
 This code sets up an Express app with a single route that displays a user-provided message on the page. However, if the user supplies a message containing JavaScript code, it will be executed on the page when the response is rendered.
 
 # Impact?
-For example, if a user sends a request to http://localhost:3000/?message=<script>alert('XSS attack')</script>, the page will show an alert box with the message "XSS attack".
+For example, if a user sends a request to ```http://localhost:3000/?message=<script>alert('XSS attack')</script>```, the page will show an alert box with the message "XSS attack".
 
 # How to fix?
 To prevent this type of attack, it's important to properly sanitize user-provided input to ensure it doesn't contain any malicious code. In this case, you could use the escape function provided by the Express library to escape any special characters in the message before rendering it on the page:
