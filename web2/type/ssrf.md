@@ -89,4 +89,4 @@ func main() {
 }
 ```
 
-This code uses the url.Parse() function to parse the URL and check if it is a valid URL before making the request. If the URL is not a valid URL, the request will be rejected with a bad
+This code uses the ```url.Parse()``` function to parse the URL and check if it is a valid URL before making the request. If the URL is not a valid URL, the request will be rejected with a bad
