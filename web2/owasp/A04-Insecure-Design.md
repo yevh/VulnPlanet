@@ -11,7 +11,7 @@ Insecure design is a broad category representing different weaknesses, expressed
 
 ## Vulnureable code example
 
-Node.js (JavaScript) does not provide advanced forms of object serialization, yet the JSON (JavaScript Object Notation) format is often used to convert JavaScript data object from/to a string representation. Before the relative recent addition of the JSON.parse method to ECMAScript, developers used to deserialize objects using the eval function. 
+Node.js (JavaScript) does not provide advanced forms of object serialization, yet the JSON (JavaScript Object Notation) format is often used to convert JavaScript data object from/to a string representation. Before the relative recent addition of the ```JSON.parse``` method to ECMAScript, developers used to deserialize objects using the ```eval``` function. 
 
 ```javascript
 function myJSONParse(data) {
@@ -56,7 +56,7 @@ public class MyController {
 
 ## Prevention code example
 
-Since Java version 9, it has been possible to specify a deserialization filter in several ways. One example is to use the setObjectInputFilter method for ObjectInputStream objects before their use. The setObjectInputFilter method takes, as an argument, a method that implements the filtering logic. The following filter only allows one to deserialize instances of the MyClass class
+Since Java version 9, it has been possible to specify a deserialization filter in several ways. One example is to use the ```setObjectInputFilter``` method for ```ObjectInputStream``` objects before their use. The ```setObjectInputFilter``` method takes, as an argument, a method that implements the filtering logic. The following filter only allows one to deserialize instances of the ```MyClass``` class
 
 ```java
 public class MyFilter {
@@ -79,7 +79,7 @@ stream.setObjectInputFilter(MyFilter::myFilter);
 
 ## Vulnureable code example
 
-Flask endpoint provides an example where untrusted data is fed into the pickle.loads function
+Flask endpoint provides an example where untrusted data is fed into the ```pickle.loads``` function
 
 ```python
 from flask import request
