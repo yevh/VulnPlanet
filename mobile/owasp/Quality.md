@@ -54,7 +54,7 @@ class UserManager {
 ```
 
 # Why it's vulnerable?
-In this app, the addUser() method checks that the username and password are not too long, but it does not properly release the User object after it is no longer needed, causing a memory leak. Additionally, the checkCredentials() method allows an attacker to create a username or password with a long string that exceeds the buffer size, causing a buffer overflow.
+In this app, the ```addUser()``` method checks that the username and password are not too long, but it does not properly release the User object after it is no longer needed, causing a memory leak. Additionally, the ```checkCredentials()``` method allows an attacker to create a username or password with a long string that exceeds the buffer size, causing a buffer overflow.
 
 # Impact?
 In the worst scenario, it can lead to code execution.
@@ -103,7 +103,7 @@ class UserManager {
   }
 }
 ```
-In this updated version of the app, the checkCredentials() method filters the list of users to remove the matched user, instead of setting the user object to nil. This avoids a memory leak and allows the User object to be deallocated properly. Additionally, the addUser() and checkCredentials() methods both check the length of the username and password before adding them to the list of users, which prevents buffer overflows.
+In this updated version of the app, the ```checkCredentials()``` method filters the list of users to remove the matched user, instead of setting the user object to nil. This avoids a memory leak and allows the User object to be deallocated properly. Additionally, the ```addUser()``` and ```checkCredentials()``` methods both check the length of the username and password before adding them to the list of users, which prevents buffer overflows.
 
 # Android
 
@@ -166,7 +166,7 @@ class User {
 ```
 
 # Why it's vulnerable?
-n this app, the addUser() method checks that the username and password are not too long, but it does not properly release the User object after it is no longer needed, causing a memory leak. Additionally, the checkCredentials() method allows an attacker to create a username or password with a long string that exceeds the buffer size, causing a buffer overflow.
+n this app, the ```addUser()``` method checks that the username and password are not too long, but it does not properly release the User object after it is no longer needed, causing a memory leak. Additionally, the ```checkCredentials()``` method allows an attacker to create a username or password with a long string that exceeds the buffer size, causing a buffer overflow.
 
 # Impact?
 In the worst scenario, it can lead to code execution.
@@ -231,4 +231,4 @@ class User {
 }
 ```
 
-In this updated version of the app, the checkCredentials() method removes the matched user from the list of users, instead of setting the user object to null. This avoids a memory leak and allows the User object to be deallocated properly. Additionally, the addUser() and checkCredentials() methods both check the length of the username and password before adding them to the list of users, which prevents buffer overflows.
+In this updated version of the app, the ```checkCredentials()``` method removes the matched user from the list of users, instead of setting the user object to null. This avoids a memory leak and allows the User object to be deallocated properly. Additionally, the ```addUser()``` and ```checkCredentials()``` methods both check the length of the username and password before adding them to the list of users, which prevents buffer overflows.
