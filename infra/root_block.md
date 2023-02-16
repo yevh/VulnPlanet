@@ -1,6 +1,6 @@
 # Root block device is not encrypted
 
-The code examples below block device is not encrypted
+The code example below block device is not encrypted
 
 ```terraform
 resource "aws_instance" "insecure_example" {
