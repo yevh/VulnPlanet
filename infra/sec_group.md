@@ -1,6 +1,6 @@
 # Security group rule allows ingress from public internet
 
-The code examples below allows all outbound traffic from the associated EC2 instances or other resources that are associated with this security group
+The code example below allows all outbound traffic from the associated EC2 instances or other resources that are associated with this security group
 
 ```terraform
  resource "aws_security_group" "insecure_example" {
