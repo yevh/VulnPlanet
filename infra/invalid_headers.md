@@ -24,7 +24,7 @@ Invalid headers being passed through to the target of the load balance may allow
 
 # How to fix?
 
-Set drop_invalid_header_fields to true
+Set ```drop_invalid_header_fields``` to ```true```
 
 ```terraform
  resource "aws_alb" "secure_example" {
