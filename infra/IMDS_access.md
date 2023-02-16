@@ -1,6 +1,6 @@
 # Token is not required for instance IMDS access
 
-In the code examples instance metadata service can be interacted with freely
+In the code example instance metadata service can be interacted with freely
 
 ```terraform
  resource "aws_instance" "bad_example" {
