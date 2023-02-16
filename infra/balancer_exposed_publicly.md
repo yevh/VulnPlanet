@@ -14,12 +14,10 @@ There are many scenarios in which you would want to expose a load balancer to th
 
 # How to fix?
 
-Enable token requirement for IMDS
+Load balancer is not exposed
 
 ```terraform
  resource "aws_alb" "secure_example" {
     internal = true
  }
 ```
-
-
