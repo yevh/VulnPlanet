@@ -88,6 +88,30 @@ Do you have a great vulnerable code example? Open a PR ♥️
      - [M9: Reverse Engineering](mobile/owasp/Reverse.md)
      - [M10: Extraneous Functionality](mobile/owasp/Extraneous.md)
 
+### Infrastructure-as-Code (IaC) ☁
+ 
+ - **Per vulnerability**
+     - [Ingress from public internet](infra/sec_group.md)
+     - [Access keys for the root is present](infra/root_keys.md)
+     - [Load balancer does not use HTTPS](infra/load_balancer_https.md)
+     - [Token is not required for instance IMDS access](infra/IMDS_access.md)
+     - [Root block device is not encrypted](infra/root_block.md)
+     - [IAM policy use of wildcard](infra/policy_wildcard.md)
+     - [Load balancer is not drop invalid headers](infra/invalid_headers.md)
+     - [Load balancer is exposed publicly](infra/balancer_exposed_publicly.md)
+     - [Subnet associates public IP address](infra/subnet_associates.md)
+     - [S3 Access block should block public ACL](infra/public_acls.md)
+     - [S3 Access block should block public policy](infra/public_policies.md)
+     - [Unencrypted S3 bucket](infra/unencrypted_S3.md)
+     - [CMK is not used for S3 encryption](infra/CMK_S3.md)
+     - [VPC Flow Logs is not enabled for VPC](infra/VPC_flow.md)
+     - [Bucket does not have logging enabled](infra/bucket_logging.md)
+     - [Bucket does not have versioning enabled](infra/bucket_versioning.md)
+     - [Instance has very low backup retention period](infra/low_backup_retention.md)
+     - [Log group is not encrypted](infra/log_group_encrypt.md)
+     - [Cluster does not have container insights enabled](infra/container_insights.md)
+     - [Security group rule does not have a description](infra/rule_description.md)
+
 ## Contact 📧
 
 All suggestions write to yevhsec1@gmail.com
