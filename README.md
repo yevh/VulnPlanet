@@ -76,7 +76,7 @@ Do you have a great vulnerable code example? Open a PR ♥️
  
  ### Mobile 📱
  
- - Top 10 Mobile 2016
+ - **OWASP Top 10 Mobile 2016**
      - [M1: Improper Platform Usage](mobile/owasp/Platform.md)
      - [M2: Insecure Data Storage](mobile/owasp/Data_Storage.md)
      - [M3: Insecure Communication](mobile/owasp/Communication.md)
