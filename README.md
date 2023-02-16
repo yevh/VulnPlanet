@@ -88,6 +88,32 @@ Do you have a great vulnerable code example? Open a PR ♥️
      - [M9: Reverse Engineering](mobile/owasp/Reverse.md)
      - [M10: Extraneous Functionality](mobile/owasp/Extraneous.md)
 
+### Infrastructure-as-Code (IaC) ☁
+ 
+ - **Per vulnerability**
+     - [Security group rule allows ingress from public internet](infra/sec_group.md)
+     - [Listener for application load balancer does not use HTTPS](infra/load_balancer_https.md)
+     - [Instance does not require IMDS access to require a token](infra/IMDS_access.md)
+     - [Root block device is not encrypted](infra/root_block.md)
+     - [IAM policy document uses sensitive action 'secretsmanager:GetSecretValue'](infra/secretsmanager.md)
+     - [IAM policy document uses sensitive action 'kms:Decrypt'](infra/kms.md)
+     - [Application load balancer is not set to drop invalid headers](infra/invalid_headers.md)
+     - [Load balancer is exposed publicly](infra/exposed_publicly.md)
+     - [Subnet associates public IP address](infra/subnet_associates.md)
+     - [No public access block so not blocking public acls](infra/public_acls.md)
+     - [No public access block so not blocking public policies](infra/public_policies.md)
+     - [Bucket does not have encryption enabled](infra/bucket_encryption.md)
+     - [Public access block does not ignore public ACLs](infra/public_ACLs.md)
+     - [VPC Flow Logs is not enabled for VPC](infra/VPC_flow.md)
+     - [Bucket does not have logging enabled](infra/bucket_logging.md)
+     - [Bucket does not have versioning enabled](infra/bucket_versioning.md)
+     - [Instance has very low backup retention period](infra/low_backup_retention.md)
+     - [Instance does not have IAM Authentication enabled](infra/IAM_authentication.md)
+     - [Instance does not have Deletion Protection enabled](infra/deletion_protection.md)
+     - [Log group is not encrypted](infra/log_group_encrypt.md)
+     - [Cluster does not have container insights enabled](infra/container_insights.md)
+     - [Security group rule does not have a description](infra/rule_description.md)
+
 ## Contact 📧
 
 All suggestions write to yevhsec1@gmail.com
