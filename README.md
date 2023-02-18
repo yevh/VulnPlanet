@@ -8,6 +8,15 @@ Do you have a great vulnerable code example? Open a PR ♥️
 
 ## Structure 📚
 
+### CVE 💡
+
+ - **Top exploitable 2021-2022**
+     - [Log4Shell](cve/CVE-2021-44228.md)
+     - [Spring4Shell](cve/CVE-2022-22965.md)
+     - [Follina](cve/CVE-2022-30190.md)
+     - [ProxyNotShell](cve/CVE-2022-41082.md)
+     - [ZeroLogon](cve/CVE-2020-1472.md)
+     
 ### Web2 🕸
    
  - **OWASP Top-10 2021**
