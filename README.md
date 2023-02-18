@@ -10,7 +10,7 @@ Do you have a great vulnerable code example? Open a PR ♥️
 
 ### CVE 💡
 
- - **Top exploitable 2021-2022**
+ - **Top exploitable 2020-2022**
      - [Log4Shell](cve/CVE-2021-44228.md)
      - [Spring4Shell](cve/CVE-2022-22965.md)
      - [Follina](cve/CVE-2022-30190.md)
