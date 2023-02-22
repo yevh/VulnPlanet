@@ -1,6 +1,6 @@
 # VulnPlanet 🪐
 
-The most extensive collection of well-structured vulnerable code examples and fixes on the internet for Web2, Web3, API, Mobile (iOS and Android) and Infrastructure-as-Code (IaC).
+Well-structured vulnerable code snippets with fixes for Web2, Web3, API, Mobile (iOS and Android) and Infrastructure-as-Code (IaC)
 
 Do you have a great vulnerable code example? Open a PR ♥️
 
