@@ -1,4 +1,4 @@
-# Authentication_Bypass
+# Authentication Bypass
 
 The code example below vulnureable to Authentication_Bypass
 
