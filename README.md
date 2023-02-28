@@ -55,6 +55,7 @@ Do you have a great vulnerable code example? Open a PR ♥️
      - [Integer Overflow](web2/type/Integer_Overflow.md)
      - [Denial Of Service](web2/type/DOS.md)
      - [Sensitive Data Exposure](web2/type/exposure.md)
+     - [Improper Error Handling](web2/type/error.md)
  
 ### API ⚕
  
