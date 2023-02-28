@@ -128,3 +128,9 @@ All suggestions write to yevhsec1@gmail.com
 ## Sponsors 🧙‍
 
 🔜
+
+***Donations***
+
+- USDT TRC20: ```TUwDc2PVag8NsqrTyHNgPvqjNL8fvrbTzV```
+- ETH ERC20: ```0x3a7b09b56dd88d4ae491c5cebb63647836304678```
+- BTC: ```19hwZ4Jxs1jpQi6tTwYvfYJgyNPWyEFHy8```
