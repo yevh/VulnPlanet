@@ -1,6 +1,6 @@
 # Authentication Bypass
 
-The code example below vulnureable to Authentication_Bypass
+The code example below vulnureable to Authentication Bypass
 
 ```java
 import java.util.HashMap;
