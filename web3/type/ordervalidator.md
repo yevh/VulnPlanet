@@ -1,6 +1,6 @@
 # Selling more tokens in OrderValidator
 
-Smart contract below is vulnureable to Arithmetic Issues (Integer overflow)
+Smart contract below is vulnureable to Selling more tokens in OrderValidator
 
 ```solidity
 uint120 totalSize = (uint120(order.size) * uint120(fill.fraction)) / uint120(fill.denominator);
