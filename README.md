@@ -74,7 +74,7 @@ Do you have a great vulnerable code example? Open a PR ♥️
    
 ### Web3 █
  
- - **Per vulnerability**
+ - **Top 10**
      - [Reentrancy](web3/Reentrancy.md)
      - [Broken Access Control](web3/Access_Control.md)
      - [Arithmetic Issues](web3/Arithmetic.md)
@@ -84,6 +84,14 @@ Do you have a great vulnerable code example? Open a PR ♥️
      - [Front-Running](web3/Front_Running.md)
      - [Time manipulation](web3/Time_manipulation.md)
      - [Short Address Attack](web3/Short_Address_Attack.md)
+ 
+  - **Per vulnerability**
+     - [Selling more tokens in OrderValidator](web3/type/ordervalidator.md)
+     - [Invalid input in aggregateValidFulfillmentOfferItems](web3/type/aggregate.md)
+     - [Merkle tree criteria](web3/type/merkle.md)
+     - [Wrong items lenght in BasicOrderFulfiller](web3/type/lenght.md)
+     - [Dirty data in name()](web3/type/dirty.md)
+ 
  
  ### Mobile 📱
  
