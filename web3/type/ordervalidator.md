@@ -26,7 +26,8 @@ The vulnerability can allow an attacker to sell more tokens than intended and dr
 To fix the vulnerability is to add additional checks to ensure that the numerator and denominator values of the ```fill``` fraction are within the range of ```uint120```. Specifically, the following lines of code should be added to the ```validateAndStore``` function. These lines ensure that the sum of the ```filledNumerator``` and ```numerator``` values of the ```fill``` fraction, as well as the ```denominator``` value, are within the range of ```uint120```.
 
 ```solidity
-
+require(filledNumerator + numerator <= type(uint120).max, "overflow");
+require(denominator <= type(uint120).max, "overflow");
 ```
 
 Similarly, the following lines should be added to the```validateAndStore``` function when handling new orders. These lines ensure that the ```numerator``` and ```denominator``` values of the order are within the range of ```uint120```.
