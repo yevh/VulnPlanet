@@ -4,7 +4,10 @@ Vulnerable code snippets with fixes for Web2, Web3, API, Mobile (iOS and Android
 
 - Do you have a great vulnerable code example? Open a PR ♥️
 
-Explore AI-driven CVE search - https://vulnplanet.com/
+
+Explore AI-driven CVE search 
+
+- https://vulnplanet.com/
 
 ## Structure 📚
 
