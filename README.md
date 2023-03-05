@@ -1,6 +1,6 @@
 ![VulnPlanet](logo.svg)
 
-Vulnerable code snippets with fixes for Web2, Web3, API, Mobile (iOS and Android) and Infrastructure-as-Code (IaC)
+Vulnerable code snippets with fixes for Web2, Web3, API, iOS, Android and Infrastructure-as-Code (IaC)
 
 - Do you have a great vulnerable code example? Open a PR ♥️
 
