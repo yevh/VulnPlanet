@@ -4,10 +4,9 @@ Vulnerable code snippets with fixes for Web2, Web3, API, iOS, Android and Infras
 
 - Do you have a great vulnerable code example? Open a PR ♥️
 
-
 Explore AI-driven CVE search 
 
-- https://vulnplanet.com/
+- [https://vulnplanet.com/](https://vulnplanet.com/pages/vulnplanet.html)
 
 ## Structure 📚
 
@@ -128,14 +127,4 @@ Explore AI-driven CVE search
 
 ## Contact 📧
 
-All suggestions write to yevhsec1@gmail.com
-
-## Sponsors 🧙‍
-
-🔜
-
-***Donations***
-
-- USDT TRC20: ```TUwDc2PVag8NsqrTyHNgPvqjNL8fvrbTzV```
-- ETH ERC20: ```0x3a7b09b56dd88d4ae491c5cebb63647836304678```
-- BTC: ```19hwZ4Jxs1jpQi6tTwYvfYJgyNPWyEFHy8```
+All suggestions write to contact@vulnplanet.com
