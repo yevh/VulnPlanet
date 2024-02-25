@@ -127,4 +127,4 @@ Explore AI-driven CVE search
 
 ## Contact 📧
 
-All suggestions write to contact@vulnplanet.com
+All suggestions write to contact@vulnplanet.com or yevhsec1@gmail.com
