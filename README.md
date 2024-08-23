@@ -123,4 +123,4 @@ Vulnerable code snippets with fixes for Web2, Web3, API, iOS, Android and Infras
 
 ## Contact 📧
 
-All suggestions write to contact@vulnplanet.com or yevhsec1@gmail.com
+All suggestions write to yevhsec1@gmail.com
